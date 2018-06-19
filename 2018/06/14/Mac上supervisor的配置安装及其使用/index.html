@@ -7,18 +7,18 @@
   
   <title>Mac上supervisor的配置安装及其使用 | xxuueeyyaann的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##supervisorSupervisor (http://supervisord.org) 是一个用 Python 写的进程管理工具，可以很方便的用来启动、重启、关闭进程（不仅仅是 Python 进程）。除了对单个进程的控制，还可以同时启动、关闭多个进程，比如很不幸的服务器出问题导致所有应用程序都被杀死，此时可以用 supervisor 同时启动所有应用程序而不是一个一个地敲命令启动。 安装1">
+  <meta name="description" content="SupervisorSupervisor (http://supervisord.org) 是一个用 Python 写的进程管理工具，可以很方便的用来启动、重启、关闭进程（不仅仅是 Python 进程）。除了对单个进程的控制，还可以同时启动、关闭多个进程，比如很不幸的服务器出问题导致所有应用程序都被杀死，此时可以用 supervisor 同时启动所有应用程序而不是一个一个地敲命令启动。 安装1br">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac上supervisor的配置安装及其使用">
 <meta property="og:url" content="http://yoursite.com/2018/06/14/Mac上supervisor的配置安装及其使用/index.html">
 <meta property="og:site_name" content="xxuueeyyaann的博客">
-<meta property="og:description" content="##supervisorSupervisor (http://supervisord.org) 是一个用 Python 写的进程管理工具，可以很方便的用来启动、重启、关闭进程（不仅仅是 Python 进程）。除了对单个进程的控制，还可以同时启动、关闭多个进程，比如很不幸的服务器出问题导致所有应用程序都被杀死，此时可以用 supervisor 同时启动所有应用程序而不是一个一个地敲命令启动。 安装1">
+<meta property="og:description" content="SupervisorSupervisor (http://supervisord.org) 是一个用 Python 写的进程管理工具，可以很方便的用来启动、重启、关闭进程（不仅仅是 Python 进程）。除了对单个进程的控制，还可以同时启动、关闭多个进程，比如很不幸的服务器出问题导致所有应用程序都被杀死，此时可以用 supervisor 同时启动所有应用程序而不是一个一个地敲命令启动。 安装1br">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/superior-01.jpeg">
-<meta property="og:updated_time" content="2018-06-15T03:39:07.000Z">
+<meta property="og:updated_time" content="2018-06-19T02:42:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac上supervisor的配置安装及其使用">
-<meta name="twitter:description" content="##supervisorSupervisor (http://supervisord.org) 是一个用 Python 写的进程管理工具，可以很方便的用来启动、重启、关闭进程（不仅仅是 Python 进程）。除了对单个进程的控制，还可以同时启动、关闭多个进程，比如很不幸的服务器出问题导致所有应用程序都被杀死，此时可以用 supervisor 同时启动所有应用程序而不是一个一个地敲命令启动。 安装1">
+<meta name="twitter:description" content="SupervisorSupervisor (http://supervisord.org) 是一个用 Python 写的进程管理工具，可以很方便的用来启动、重启、关闭进程（不仅仅是 Python 进程）。除了对单个进程的控制，还可以同时启动、关闭多个进程，比如很不幸的服务器出问题导致所有应用程序都被杀死，此时可以用 supervisor 同时启动所有应用程序而不是一个一个地敲命令启动。 安装1br">
 <meta name="twitter:image" content="http://yoursite.com/images/superior-01.jpeg">
   
     <link rel="alternate" href="/atom.xml" title="xxuueeyyaann的博客" type="application/atom+xml">
@@ -88,7 +88,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##supervisor<br>Supervisor (<a href="http://supervisord.org" target="_blank" rel="noopener">http://supervisord.org</a>) 是一个用 Python 写的进程管理工具，可以很方便的用来启动、重启、关闭进程（不仅仅是 Python 进程）。除了对单个进程的控制，还可以同时启动、关闭多个进程，比如很不幸的服务器出问题导致所有应用程序都被杀死，此时可以用 supervisor 同时启动所有应用程序而不是一个一个地敲命令启动。</p>
+        <h2 id="Supervisor"><a href="#Supervisor" class="headerlink" title="Supervisor"></a>Supervisor</h2><p>Supervisor (<a href="http://supervisord.org" target="_blank" rel="noopener">http://supervisord.org</a>) 是一个用 Python 写的进程管理工具，可以很方便的用来启动、重启、关闭进程（不仅仅是 Python 进程）。除了对单个进程的控制，还可以同时启动、关闭多个进程，比如很不幸的服务器出问题导致所有应用程序都被杀死，此时可以用 supervisor 同时启动所有应用程序而不是一个一个地敲命令启动。</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install supervisor</span><br></pre></td></tr></table></figure>
 <h2 id="开机自启动配置"><a href="#开机自启动配置" class="headerlink" title="开机自启动配置"></a>开机自启动配置</h2><p>装完之后会有如下提示</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">==&gt; Caveats</span><br><span class="line">To have launchd start supervisor now <span class="keyword">and</span> restart at login:</span><br><span class="line">  brew services start supervisor</span><br><span class="line">Or, <span class="keyword">if</span> you don<span class="string">'t want/need a background service you can just run:</span></span><br><span class="line"><span class="string">  supervisord -c /usr/local/etc/supervisord.ini</span></span><br><span class="line"><span class="string">==&gt; Summary</span></span><br><span class="line"><span class="string">🍺  /usr/local/Cellar/supervisor/3.3.4: 526 files, 6.5MB</span></span><br></pre></td></tr></table></figure>
@@ -123,7 +123,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/14/Mac上supervisor的配置安装及其使用/" data-id="cjil30a1c0000kjlv6g2d3oxf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/14/Mac上supervisor的配置安装及其使用/" data-id="cjil33coe0000m5lvzsog1nyj" class="article-share-link">Share</a>
       
       
     </footer>
