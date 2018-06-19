@@ -15,7 +15,7 @@
 <meta property="og:description" content="SupervisorSupervisor (http://supervisord.org) 是一个用 Python 写的进程管理工具，可以很方便的用来启动、重启、关闭进程（不仅仅是 Python 进程）。除了对单个进程的控制，还可以同时启动、关闭多个进程，比如很不幸的服务器出问题导致所有应用程序都被杀死，此时可以用 supervisor 同时启动所有应用程序而不是一个一个地敲命令启动。 安装1br">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/superior-01.jpeg">
-<meta property="og:updated_time" content="2018-06-19T02:45:39.000Z">
+<meta property="og:updated_time" content="2018-06-19T02:50:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac上supervisor的配置安装及其使用">
 <meta name="twitter:description" content="SupervisorSupervisor (http://supervisord.org) 是一个用 Python 写的进程管理工具，可以很方便的用来启动、重启、关闭进程（不仅仅是 Python 进程）。除了对单个进程的控制，还可以同时启动、关闭多个进程，比如很不幸的服务器出问题导致所有应用程序都被杀死，此时可以用 supervisor 同时启动所有应用程序而不是一个一个地敲命令启动。 安装1br">
@@ -99,7 +99,7 @@
 <p>检查是否真的启动</p>
 <p><img src="/images/superior-01.jpeg" alt=""></p>
 <p>启动信息中</p>
-<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/Cellar/supervisor/<span class="number">3.3</span><span class="number">.4</span>/libexec/bin/python /usr/local/opt/supervisor/bin/supervisord -c /usr/local/etc/supervisord.ini --nodaemon</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/Cellar/supervisor/<span class="number">3.3</span><span class="number">.4</span>/libexec/bin/python </span><br><span class="line">/usr/local/opt/supervisor/bin/supervisord -c /usr/local/etc/supervisord.ini --nodaemon</span><br></pre></td></tr></table></figure>
 <p>分别包含了Python的路径，supervisord的路径，第三个，-c设定config路径，第四是supervisor配置文件config路径</p>
 <p>此时查看一下config配置文件的内容，可以通过</p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /usr/local/etc/supervisord.ini</span><br></pre></td></tr></table></figure>
@@ -123,7 +123,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/14/Mac上supervisor的配置安装及其使用/" data-id="cjil374sr0000o0lv85qopxaj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/14/Mac上supervisor的配置安装及其使用/" data-id="cjil3cqne0000qblvwi4w962b" class="article-share-link">Share</a>
       
       
     </footer>
